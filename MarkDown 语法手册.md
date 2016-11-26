@@ -189,13 +189,22 @@ Markdown
 如果要在列表项目内放进引用，那 > 就需要缩进
 
 ```
-* 混乱中:
+* 混乱中
+
     > 混乱中。
     > 混乱中。
 ```
-* 混乱中:
-    > 混乱中。  
+* 混乱中
+
+    > 混乱中  
     > 混乱中
+
+7.包含代码区块的引用
+- **语法说明**
+如果要放代码区块的话，该区块就需要缩进两次，也就是 8 个空格或是 2 个制表符
+```
+<代码写在这>
+```
 
 ## 引用
 
@@ -218,11 +227,15 @@ Markdown
 区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 >
 ```
 >>> 请问 Markdwon 怎么用？ - 小白
+
 >> 自己看教程！ - 愤青
+
 > 教程在哪？ - 小白
 ```
 >>> 请问 Markdwon 怎么用？ - 小白  
+ 
 >> 自己看教程！ - 愤青   
+
 > 教程在哪？ - 小白
 
 引用其他要素
@@ -244,3 +257,190 @@ Markdown
 > 给出一些例子代码：
 >
 >     return shell_exec("echo $input | $markdown_script");
+
+## 插入图像
+
+1.行内式
+- **语法说明**
+`![图片Alt](图片地址 “图片Title”)`
+
+![汪](http://ubq.ubiaoqing.com/ubiaoqing4c32785d02505accdcdaec8a9499b5ac.gif "汪.gif")
+
+2.参考式
+- **语法说明**
+在文档要插入图片的地方写![图片Alt][标记]
+在文档的最后写上[标记]:图片地址 “Title”
+
+## 内容目录
+在段落中填写 [TOC] 以显示全文内容的目录结构。
+
+## 注角
+
+- **语法说明**
+使用 Markdown1可以效率的书写文档, 直接转换成 HTML2, 你可以使用 Leanote3 编辑器进行书写。
+脚注自动被搬运到最后面，请到文章末尾查看，并且脚注后方的链接可以直接跳转回到加注的地方。
+
+```
+使用 Markdown[^1]可以效率的书写文档, 直接转换成 HTML[^2], 你可以使用 Leanote[^Le] 编辑器进行书写。
+[^1]:Markdown是一种纯文本标记语言
+[^2]:HyperText Markup Language 超文本标记语言
+[^Le]:开源笔记平台，支持Markdown和笔记直接发为博文
+```
+
+使用 Markdown[^1]可以效率的书写文档, 直接转换成HTML[^2], 你可以使用 Leanote[^Le] 编辑器进行书写。
+[^1]:Markdown是一种纯文本标记语言
+[^2]:HyperText Markup Language 超文本标记语言
+[^Le]:开源笔记平台，支持Markdown和笔记直接发为博文
+
+## LaTeX 公式
+
+- **语法说明**
+$ 表示行内公式
+```
+质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达。
+```
+
+质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达。
+
+- **语法说明**
+$$ 表示整行公式
+访问 [MathJax](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference) 参考更多使用方法。
+```
+$$\sum_{i=1}^n a_i=0$$
+$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$
+$$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
+```
+
+$$\sum_{i=1}^n a_i=0$$
+$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$
+$$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
+
+<!-- ## 流程图
+
+```
+flow
+st=>start: Start:>https://www.zybuluo.com
+io=>inputoutput: verification
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+sub=>subroutine: Your Subroutine
+e=>end
+st->io->op->cond
+cond(yes)->e
+cond(no)->sub->io
+```
+
+flow
+st=>start: Start:>https://www.zybuluo.com
+io=>inputoutput: verification
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+sub=>subroutine: Your Subroutine
+e=>end
+st->io->op->cond
+cond(yes)->e
+cond(no)->sub->io -->
+
+## 表格
+- **语法说明**
+不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。
+列于列之间用管道符|隔开。原生方式的表格每一行的两边也要有管道符。
+第二行还可以为不同的列指定对齐方向。默认为左对齐，在-右边加上:就右对齐。
+
+简单方式写表格：
+```
+学号|姓名|分数
+-|-|-
+小明|男|75
+小红|女|79
+小陆|男|92
+```
+
+原生方式写表格：
+```
+|学号|姓名|分数|
+|-|-|-|
+|小明|男|75|
+|小红|女|79|
+|小陆|男|92|
+```
+
+为表格第二列指定方向：
+```
+产品|价格
+-|-:
+Leanote 高级账号|60元/年
+Leanote 超级账号|120元/年
+```
+
+简单方式写表格：
+
+学号|姓名|分数
+-|-|-
+小明|男|75
+小红|女|79
+小陆|男|92
+
+
+原生方式写表格：
+
+|学号|姓名|分数|
+|-|-|-|
+|小明|男|75|
+|小红|女|79|
+|小陆|男|92|
+
+
+为表格第二列指定方向：
+
+产品|价格
+-|-:
+Leanote 高级账号|60元/年
+Leanote 超级账号|120元/年
+
+## 分隔线
+- **语法说明**
+用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格
+
+```
+* * *
+***
+*****
+- - -
+---------------------------------------
+```
+
+* * *
+***
+*****
+- - -
+---------------------------------------
+
+## 代码
+- **语法说明**
+
+插入程序代码的方式有两种，一种是利用缩进(Tab 缩进式插入前方必须有空行), 另一种是利用”`”符号（一般在ESC键下方）包裹代码。用六个`包裹多行代码
+插入行内代码，即插入一个单词或者一句代码的情况，使用`code`这样的形式插入。
+插入多行代码，可以使用缩进或者“` code “`,具体看示例。
+
+```
+C语言里的函数 `scanf()` 怎么使用？
+```
+
+C语言里的函数 `scanf()` 怎么使用？
+
+```c
+    #include <stdio.h>
+    int main(void)
+    {
+        printf("Hello world\n");
+    }
+```
+
+```c
+#include <stdio.h>
+int main(void)
+{
+    printf("Hello world\n");
+}
+```
