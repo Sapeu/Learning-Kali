@@ -112,3 +112,8 @@ dmitry -pfb targethost
 -b 让TCP扫描器输出端口banner
 -t 设置端口扫描的TTL，默认是2秒
 ```
+
+## maltego
+
+> Maltego是开源的情报收集和法证调查程序
+>> 需要VPN
