@@ -11,3 +11,11 @@ onesixtyone 192.168.56.101
 # 进行更细致的扫描
 onesixtyone -d 192.168.56.101
 ```
+
+## snmpcheck
+
+> 收集SNMP设备的有关信息
+
+```shell
+snmpcheck -t 192.168.56.101
+```
