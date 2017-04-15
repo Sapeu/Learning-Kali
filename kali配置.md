@@ -45,6 +45,7 @@ gnome-shell –replace #在默认模式临时开启
 - User themes 想要装shell 主题，就得先装这货
 - Window list 面板，显示打开的应用的面板
 - Windownavigator 让你在overview 下方便，紧紧通过键盘就可以轻松实现工作区，程序的准确切换
+- Topicons 将左下角状态栏图标移动的上面
 
 > 设置gonme主题
 > [gnome主题](https://www.gnome-look.org/)
