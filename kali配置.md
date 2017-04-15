@@ -28,6 +28,39 @@ gsettings set org.gnome.desktop.session session-name gnome-fallback #还原默�
 gnome-shell –replace #在默认模式临时开启
 ```
 
+> 设置gnome扩展
+> 只能用火狐打开[GNOME shell extensions](https://extensions.gnome.org)安装和管理gnome程序
+
+- Alternatetab 增强`Alt+tab`用的，可以在切换程序的显示图标,缩略图
+- Applications menu + Places status indicator 左上角应用程序菜单和位置
+- Auto move windows 设置打开程序的默认的工作区
+- Frippery move clock 移动时钟到右边
+- Lunar calendar 农历,需要依赖`typelib-1_0-LunarDate-2_0`或者`gir1.2-lunar-date-2.0`
+- Mmod panel 1：可以将图标放在面板上2：修改面板，图标的大小 3：设置时钟的位置 4：设置面板的位置 5：设置面板是否隐藏
+- Media player indicator 在状态栏控制媒体播放
+- Native window placement 让overview下程序的显示更加紧凑一些
+- Openweather 天气
+- Removable drive menu 打个比方：插上U盘，面板上就会显示一个图标，可以打开U盘，或者弹出
+- Taskbar 任务栏
+- User themes 想要装shell 主题，就得先装这货
+- Window list 面板，显示打开的应用的面板
+- Windownavigator 让你在overview 下方便，紧紧通过键盘就可以轻松实现工作区，程序的准确切换
+
+> 设置gonme主题
+> [gnome主题](https://www.gnome-look.org/)
+> 下载的若是安装程序,安装即可,压缩文件的话,看文档
+> 主题压缩文件的话,看文档,解压到对应/usr/share/themes或者个人目录下~/.themes
+> 图标压缩文件的话,看文档,解压到对应/usr/share/icons或者个人目录下~/.icons
+
+- 自用GTK3主题-[OSX-Arc-Collection](https://www.gnome-look.org/p/1167049/)
+  ![OSX-Arc-Collection](https://cn.pling.com/img/5/9/0/2/287ff414e65c196dfa008ca4ffe2d76d6d35.png)
+
+- 自用鼠标图标-[Capitaine Cursors](https://www.gnome-look.org/p/1148692/)
+  ![Capitaine Cursors](https://cn.pling.com/img/9/7/a/5/84b855075d1e843ead31a9fdb98b437868df.png)
+  
+- 自用程序图标-[La Capitaine](https://www.gnome-look.org/p/1148695/)
+  ![](https://cn.pling.com/img/7/1/f/4/bc749b8b5db82372db85825279c2049362c5.png)
+
 3. Kali-linux设置vpn代理
 
 ```shell
